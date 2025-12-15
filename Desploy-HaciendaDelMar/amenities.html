@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+        }
+        main#main > div.standard-content-width {
+            padding: 0 !important;
+            max-width: 100% !important;
+        }
+        .main-content {
+            width: 100%;
+            position: relative;
+            margin: auto;
+            background: #FCF9F3;
+            padding: 1% 0 6% 0;
+        }
+        .contMoments{
+            width: 80%;
+            position: relative;
+            padding: 3.5rem 0rem 2rem 0rem;
+            padding-bottom: 0; 
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .titleAmenities {
+            text-align: left;
+            margin: 0;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            text-transform: uppercase;
+            line-height: 1.75rem;
+            color: #072942;
+            font-family: "Roboto-Thin",sans-serif;
+            font-size: 36px;
+            font-weight: 300;
+            width: 40%;
+        }
+        .titleAmenities > span {
+            font-family: "EBGaramond-Regular",serif;
+            font-size: 36px;
+            font-weight: 500;
+        }
+        .txtAmenities{
+            color: #232629;
+            font-family: "EBGaramond-Regular",serif;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.75rem;
+            width: 55%;
+        }
+        .colDouble{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 2%;
+        }
+        .colImage{
+            display: flex;
+        }
+        .colImage img{
+            width: 100%;
+        }
+        .decoAmenities{
+            position: absolute;
+            top: 17vw;
+        }
+        .decoAmenities2{
+            position: absolute;
+            right: 0;
+            top: 40vw;
+        }
+        @media (max-width:1400px) {
+            .decoAmenities {
+                top: 20vw;
+            }
+            .decoAmenities2 {
+                top: 45vw;
+            }
+        }
+        @media (max-width:990px) {
+            .decoAmenities {
+                top: 40vw;
+                left: -10vw;
+            }
+            .decoAmenities2 {
+                top: 57vw;
+            }
+            .colDouble {
+                flex-direction: column;
+            }
+            .titleAmenities, .txtAmenities{
+                width: 100%;
+            }
+        }
+        @media (max-width:764px) {
+            .decoAmenities {
+                top: 40vw;
+                left: -15vw;
+                opacity: .6;
+                width: 20vw;
+            }
+            .decoAmenities2 {
+                top: 87vw;
+                opacity: .6;
+                width: 50vw;
+            }
+        }
+        @media (max-width:640px){
+            .decoAmenities, .decoAmenities2 {
+                display: none;
+            }
+            .contMoments {
+                width: 85%;
+            }
+        }
+    </style>
+
+    <style>
+        .kids-lounge-section {
+            background: #ffffff;
+            padding: 60px 0 80px;
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* Grid principal */
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            align-items: start;
+        }
+
+        /* Bloques */
+        .itemAmenities img {
+            width: 100%;
+            height: 424px;
+            border-radius: 2px;
+            display: block;
+            margin-bottom: 25px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .titleAsection2 {
+            font-size: 22px;
+            font-weight: 300;
+            font-family: "Roboto-Thin",sans-serif;
+            color: #0b2755;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .titleAsection2 span {
+            font-family: "EBGaramond-Regular",serif;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .txtASection2 {
+            font-family: "EBGaramond-Regular",serif;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #333;
+            max-width: 460px;
+            margin: 0 auto;
+        }
+
+        /* Decorativos azules */
+        .item-decor {
+            position: relative;
+        }
+
+        .decor {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            background-image: url('https://image-tc.galaxy.tf/wipng-9uiwog9iuaee9l4bf7fxahdws/rectangle-3.png');
+            background-size: cover;
+            z-index: 0;
+        }
+
+        .decor-1 {
+            top: -10%;
+            right: 12%;
+        }
+
+        .decor-2 {
+            top: 6%;
+            right: -12%;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 991px) {
+            .two-columns {
+                grid-template-columns: 1fr;
+                gap: 70px;
+            }
+
+            .decor {
+                width: 70px;
+                height: 70px;
+            }
+
+            .decor-1 {
+                top: -15px;
+                right: 40px;
+            }
+
+            .decor-2 {
+                top: 55px;
+                right: -5px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .titleAsection2 {
+                font-size: 20px;
+            }
+
+            .itemAmenities img{
+                height: auto;
+            }
+
+            .decor {
+                width: 55px;
+                height: 55px;
+            }
+        }
+
+        body{
+            margin: 0;
+        }
+        .section1Amadeus{
+            width: 100%;
+            & img{
+                width: -webkit-fill-available;
+                border: 3px solid #935938;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="section1Amadeus">
+        <img src="https://gr-hub-projects.github.io/webDeploy/Desploy-HaciendaDelMar/imgs/Amenities/headerAmenities2.png" alt="">
+    </section>
+
+    <section class="main-content">
+        <img class="decoAmenities" src="https://image-tc.galaxy.tf/wipng-avymx7316ho6to3kcvksize3s/file.png" alt="">
+        <img class="decoAmenities2" src="https://image-tc.galaxy.tf/wipng-4si1upsmcy73yvfh1q2je8xsh/file.png" alt=""> 
+        <div class="contMoments">
+            <div class="colDouble">
+                <p class="titleAmenities">
+                    Momentos <span>All-Inclusive </span> <br>
+                    pensados para disfrutar, <br>
+                    descansar y descubrir
+                </p>
+                <p class="txtAmenities">
+                    Frente a las doradas costas de Los Cabos en México, <strong>Hacienda del Mar Los Cabos</strong>  eleva la experiencia de un resort todo incluido, con una colección de amenidades que celebran el descanso, la conexión y el alma de México. Sumérgete en la serenidad de nuestras cinco albercas, donde la brisa marina y la luz del sol marcan el compás perfecto del día. Encuentra equilibrio en Cactus Spa™, un santuario inspirado en tradiciones mexicanas que renueva cuerpo y espíritu. Para quienes buscan energía, nuestro gimnasio y espacios al aire libre invitan al movimiento y la vitalidad bajo el sol de Cabo. 
+                    <br> <br>
+                    Las familias encuentran alegría en el Kid’s Club, un universo de juego y risas donde la imaginación no tiene límites. Entre cada experiencia, relájate en nuestro Salón para Huéspedes, o permite que nuestro Equipo de Concierge diseñe momentos a tu medida. En el Hotel Hacienda del Mars Los Cabos todo está incluido, y cada detalle se siente hecho especialmente para ti.
+                </p>
+            </div>
+            <div class="colImage">
+                <img src="https://image-tc.galaxy.tf/wipng-b7q9qnnyjuhdulxpzic2nyszx/file.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="section1Amadeus">
+        <img src="https://gr-hub-projects.github.io/webDeploy/Desploy-HaciendaDelMar/imgs/Amenities/amenities1.png" alt="">
+    </section>
+
+    <section class="section1Amadeus">
+        <img src="https://gr-hub-projects.github.io/webDeploy/Desploy-HaciendaDelMar/imgs/Amenities/amenities2.png" alt="">
+    </section>
+
+    <section class="section1Amadeus">
+        <img src="https://gr-hub-projects.github.io/webDeploy/Desploy-HaciendaDelMar/imgs/Amenities/amenities3.png" alt="">
+    </section>
+
+     <section class="section1Amadeus">
+        <img src="https://gr-hub-projects.github.io/webDeploy/Desploy-HaciendaDelMar/imgs/Amenities/amenities4.png" alt="">
+    </section>
+
+    <section class="kids-lounge-section">
+        <div class="two-columns">
+            <!-- Bloque 1 - KID'S CLUB -->
+            <div class="itemAmenities">
+                <img src="https://image-tc.galaxy.tf/wijpeg-a4qrughq1wqghb1blso13xmi0/file.jpg" alt="Kids Club">
+                <h3 class="titleAsection2">
+                    KID’S CLUB: <span>ACTIVIDADES FAMILIARES</span> EN LOS CABOS
+                </h3>
+                <p class="txtASection2">
+                    Un mundo lleno de color, creatividad y aventuras donde los más pequeños exploran,
+                    juegan e imaginan libremente, mientras los adultos disfrutan su descanso.
+                </p>
+            </div>
+            <!-- Bloque 2 - Salón para huéspedes -->
+            <div class="itemAmenities item-decor">
+                <!-- decorativos azules -->
+                <div class="decor decor-1"></div>
+                <div class="decor decor-2"></div>
+
+                <img src="https://image-tc.galaxy.tf/wijpeg-4vhe5yadj0irktvdm9czl7ndo/file.jpg" alt="Salón para huéspedes">
+
+                <h3 class="titleAsection2">
+                    <span>SALÓN PARA HUÉSPEDES</span> EN HACIENDA<br>
+                    DEL MAR LOS CABOS
+                </h3>
+
+                <p class="txtASection2">
+                    Abierto las 24 horas, nuestro Guest Lounge Salón para Huéspedes ofrece un
+                    ambiente relajado con acceso a internet, ideal para trabajar, descansar en cómodos
+                    sillones o simplemente hacer una pausa entre tus experiencias.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section1Amadeus">
+        <img src="https://gr-hub-projects.github.io/webDeploy/Desploy-HaciendaDelMar/imgs/Amenities/amenities5.png" alt="">
+    </section>
+
+     <section class="section1Amadeus">
+        <img src="https://gr-hub-projects.github.io/webDeploy/Desploy-HaciendaDelMar/imgs/Amenities/amenities6.png" alt="">
+    </section>
+
+    <section class="section1Amadeus">
+        <img src="https://gr-hub-projects.github.io/webDeploy/Desploy-HaciendaDelMar/imgs/Home/homeFoo.png" alt="">
+    </section>
+</body>
+</html>
